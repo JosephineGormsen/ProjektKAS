@@ -34,7 +34,7 @@ public class AdminWindow extends Stage {
         Tab tabDeltagere = new Tab("Deltagere");
         tabPane.getTabs().add(tabDeltagere);
 
-        DeltagerPane deltagerPane = new DeltagerPane();
+        gui.DeltagerPane deltagerPane = new gui.DeltagerPane();
         tabDeltagere.setContent(deltagerPane);
 
         Tab tabHotel = new Tab("Hoteller");
@@ -46,7 +46,7 @@ public class AdminWindow extends Stage {
         Tab tabKonferencer = new Tab("Konferencer");
         tabPane.getTabs().add(tabKonferencer);
 
-        KonferencePane konferencePane = new KonferencePane();
+        gui.KonferencePane konferencePane = new gui.KonferencePane();
         tabKonferencer.setContent(konferencePane);
 
         Tab tabUdflugter = new Tab("Udflugter");

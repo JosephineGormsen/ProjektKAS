@@ -54,7 +54,7 @@ public class AdminPane extends GridPane {
     //------------------------------
     private void loginAction(){
         if(this.txfBrugerNavn.getText().trim().equals("KAS") && this.txfPassword.getText().trim().equals("KAS")) {
-            AdminWindow adminWindow = new AdminWindow();
+            gui.AdminWindow adminWindow = new gui.AdminWindow();
             adminWindow.show();
 
             this.txfBrugerNavn.clear();

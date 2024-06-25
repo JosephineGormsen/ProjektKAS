@@ -9,6 +9,6 @@ import java.util.ArrayList;
 
 public class App{
     public static void main(String[] args){
-        Application.launch(StartWindow.class);
+        Application.launch(gui.StartWindow.class);
     }
 }
