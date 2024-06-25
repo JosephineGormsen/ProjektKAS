@@ -244,7 +244,7 @@ public class KonferencePane extends GridPane {
     }
 
     private void updateAction () {
-        CreateKonferenceWindow createKonferenceWindow = new CreateKonferenceWindow(this.konference);
+        gui.CreateKonferenceWindow createKonferenceWindow = new gui.CreateKonferenceWindow(this.konference);
         createKonferenceWindow.showAndWait();
 
         this.updateControls();
@@ -269,7 +269,7 @@ public class KonferencePane extends GridPane {
     }
 
     private void addHotelAction () {
-        AddHotelWindow addHotelWindow = new AddHotelWindow(this.konference);
+        gui.AddHotelWindow addHotelWindow = new gui.AddHotelWindow(this.konference);
         addHotelWindow.showAndWait();
 
         this.updateControls();
@@ -284,7 +284,7 @@ public class KonferencePane extends GridPane {
     }
 
     private void addUdflugtAction () {
-        AddUdflugtTilKonferenceWindow addUdflugtTilKonferenceWindow = new AddUdflugtTilKonferenceWindow(this.konference);
+        gui.AddUdflugtTilKonferenceWindow addUdflugtTilKonferenceWindow = new gui.AddUdflugtTilKonferenceWindow(this.konference);
         addUdflugtTilKonferenceWindow.showAndWait();
 
         this.updateControls();

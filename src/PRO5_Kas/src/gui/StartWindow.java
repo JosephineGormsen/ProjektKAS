@@ -49,7 +49,7 @@ public class StartWindow extends Application {
             deltagerStage.show();
         });
         adminButton.setOnAction(e -> {
-            AdminPane adminPane = new AdminPane();
+            gui.AdminPane adminPane = new gui.AdminPane();
             Scene adminScene = new Scene(adminPane, 600, 400);
             Stage adminStage = new Stage();
             adminStage.setScene(adminScene);

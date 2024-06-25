@@ -182,7 +182,7 @@ public class UdflugterPane extends GridPane {
     }
 
     private void opdaterAction () {
-        CreateUdflugterWindow createUdflugterWindow = new CreateUdflugterWindow(this.udflugt);
+        gui.CreateUdflugterWindow createUdflugterWindow = new gui.CreateUdflugterWindow(this.udflugt);
         createUdflugterWindow.showAndWait();
 
         this.OpdaterControls();

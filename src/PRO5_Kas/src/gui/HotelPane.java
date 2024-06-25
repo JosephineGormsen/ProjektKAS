@@ -1,7 +1,6 @@
 package gui;
 
- import model.*;
- import controller.*;
+ import controller.Controller;
  import javafx.beans.value.ChangeListener;
  import javafx.geometry.HPos;
  import javafx.geometry.Insets;
@@ -10,6 +9,11 @@ package gui;
  import javafx.scene.layout.HBox;
 import java.util.ArrayList;
  import javafx.stage.Stage;
+ import model.EnumVærelser;
+ import model.Hotel;
+ import model.HotelBooking;
+ import model.Konference;
+ import model.Tillæg;
 
 public class HotelPane extends GridPane {
    private Hotel hotel;
@@ -215,7 +219,7 @@ HotelPane(){
     // --------------------------------------------------------------
 
     private void createHotelAction () {
-        CreateHotelWindow createHotelWindow = new CreateHotelWindow();
+        gui.CreateHotelWindow createHotelWindow = new gui.CreateHotelWindow();
         createHotelWindow.showAndWait();
 
         this.hotel = createHotelWindow.getHotel();
@@ -225,7 +229,7 @@ HotelPane(){
     }
 
     private void updateHotelAction () {
-        CreateHotelWindow adminCreateHotelWindow = new CreateHotelWindow(this.lvwHotels.getSelectionModel().getSelectedItem());
+        gui.CreateHotelWindow adminCreateHotelWindow = new gui.CreateHotelWindow(this.lvwHotels.getSelectionModel().getSelectedItem());
         adminCreateHotelWindow.showAndWait();
 
         this.updateControls();
@@ -243,7 +247,7 @@ HotelPane(){
 //    // --------------------------------------------------------------
 
     private void createTillægAction () {
-        CreateTillægWindow createTillægWindow = new CreateTillægWindow(this.hotel);
+        gui.CreateTillægWindow createTillægWindow = new gui.CreateTillægWindow(this.hotel);
         createTillægWindow.showAndWait();
 
         this.tillæg = createTillægWindow.getTillæg();
@@ -251,7 +255,7 @@ HotelPane(){
     }
 //
     private void updateTillægAction () {
-        CreateTillægWindow createAddOnWindow = new CreateTillægWindow(this.hotel, this.tillæg);
+        gui.CreateTillægWindow createAddOnWindow = new gui.CreateTillægWindow(this.hotel, this.tillæg);
         createAddOnWindow.showAndWait();
 
         this.updateControls();
